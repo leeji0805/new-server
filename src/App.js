@@ -1,6 +1,10 @@
 import './App.css';
 import React, {Component} from 'react';
+
 import axios from 'axios'; //install axios
+
+
+
 
 class App extends Component{
   state = {
@@ -18,7 +22,10 @@ class App extends Component{
       this.state.selectedFile,
       this.state.selectedFile.name
     )
+
     axios.post("API Gateway URL", formData).then(() => { // API Gateway URL 
+
+
       this.setState({selectedFile: null});
       this.setState({fileUploadedSuccessfully: true});
     })
@@ -56,7 +63,9 @@ class App extends Component{
   render(){
     return (
       <div className='container'>
+
         <h2>파일 업로드 페이지</h2>
+
         <div>
           <br></br>
           <input type = "file" onChange = {this.onFileChange} />
